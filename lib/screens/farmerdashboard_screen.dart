@@ -1,4 +1,6 @@
 import 'package:agromart/constants/colors.dart';
+import 'package:agromart/screens/addNewProduct_screen.dart';
+import 'package:agromart/screens/viewOrders_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -83,6 +85,12 @@ class _FarmerDashboardScreenState extends State<FarmerDashboardScreen> {
                 label: 'Add New Product',
                 onPressed: () {
                   // Navigate to add product screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const AddNewProductScreen(),
+                    ),
+                  );
                 },
                 color: Color(0xFFD88C1D),
               ),
@@ -92,6 +100,12 @@ class _FarmerDashboardScreenState extends State<FarmerDashboardScreen> {
                 label: 'View Orders',
                 onPressed: () {
                   // Navigate to view orders screen
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (_) => const ViewOrdersScreen(),
+                    ),
+                  );
                 },
                 color: Color(0xFFB5731B),
               ),
